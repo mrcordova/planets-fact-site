@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@100..900&display=swap");
 
 .league-spartan-bold {
-  font-family: "League Spartan", sans-serif;
+  font-family: "Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 .league-spartan-regular {
-  font-family: "League Spartan", sans-serif;
+  font-family: "Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -22,10 +22,29 @@
 :root {
   --bg: #070724;
   --white: #ffffff;
+  --gray: #979797;
+  --teal: #419ebb;
 }
+a {
+  color: var(--gray);
+  text-decoration: none;
+  text-transform: uppercase;
 
+  /* Mobile */
+  font-size: 0.5625rem;
+  letter-spacing: 0.120625rem;
+  line-height: 1.11;
+
+  &:has(:active, :visited) {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 body {
-  background: var(--bg);
+  background: url(../assets/background-stars.svg), var(--bg);
+
+  background-position: right;
+  background-size: cover;
   color: var(--white);
 }
 header {
@@ -37,6 +56,22 @@ header {
 }
 #desktop-tabs {
   display: none;
+}
+#mobile-tabs {
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  justify-content: space-between;
+  /* Mobile */
+  padding-inline: 1.5rem;
+
+  & a {
+    padding-block: 1.25rem 1.0625rem;
+    &.current-tab {
+      border-bottom: 0.25rem solid var(--teal);
+      color: var(--white);
+    }
+  }
 }
 .logo {
   font-size: 1.75rem;
