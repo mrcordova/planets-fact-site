@@ -5,6 +5,10 @@ const mobileTabs = document.getElementById("mobile-tabs");
 const source = document.querySelector("#source>a");
 const paraInfo = document.getElementById("overview-para");
 const mobileMenu = document.getElementById("mobile-menu");
+const stats = document.querySelectorAll(
+  "#rot-con, #rev-con, #rad-con, #temp-con"
+);
+const content = document.getElementById("content");
 const planets = {};
 let currentPlanetName = "Mercury";
 for (const planet of data) {
@@ -37,5 +41,19 @@ mobileMenu.addEventListener("click", (e) => {
   if (planetNameEle) {
     // console.log(planetNameEle.dataset.name);
     currentPlanetName = planetNameEle.dataset.name;
+    const planetHeader = document.querySelector(".content-info>h1");
+    planetHeader.textContent = planets[currentPlanetName].name;
+    console.log(planets[currentPlanetName]);
+    paraInfo.textContent =
+      planets[currentPlanetName][currentTab.dataset.name].content;
+    source.setAttribute(
+      "href",
+      planets[currentPlanetName][currentTab.dataset.name].source
+    );
+    for (const stat of stats) {
+      stat.children[1].textContent = `${
+        planets[currentPlanetName][stat.dataset.name]
+      }`;
+    }
   }
 });

@@ -256,6 +256,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
 
   /* Mobile */
   padding-inline: 1.5rem;
