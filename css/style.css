@@ -1,1 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@100..900&display=swap");
 
+.league-spartan-bold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.league-spartan-regular {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.antonio-medium {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+:root {
+  --bg: #070724;
+  --white: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+}
+header {
+  display: flex;
+}
+.logo {
+  font-size: 1.75rem;
+  letter-spacing: -0.065625rem;
+}
