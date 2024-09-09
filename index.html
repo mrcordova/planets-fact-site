@@ -15,39 +15,129 @@
     <title>Frontend Mentor | Planets fact site</title>
   </head>
   <body>
-    Mercury
+    <header>
+      <p>THE PLANETS</p>
 
-    <!-- Overview Content Start -->
+      <nav>
+        <menu id="desktop-menu">
+          <li><a href="">Mercury</a></li>
+          <li><a href="">Venus</a></li>
+          <li><a href="">Earth</a></li>
+          <li><a href="">Mars</a></li>
+          <li><a href="">Jupiter</a></li>
+          <li><a href="">Saturn</a></li>
+          <li><a href="">Uranus</a></li>
+          <li><a href="">Neptune</a></li>
+        </menu>
+      </nav>
+      <button popovertarget="mobile-menu" popovertargetaction="toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+          <g fill="#FFF" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+          </g>
+        </svg>
+      </button>
 
-    Mercury is the smallest planet in the Solar System and the closest to the
-    Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all
-    the Sun's planets. Mercury is one of four terrestrial planets in the Solar
-    System, and is a rocky body like Earth. Source : Wikipedia
-    <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) -->
+      <menu id="mobile-menu" popover>
+        <li><a href="">Mercury</a></li>
+        <li><a href="">Venus</a></li>
+        <li><a href="">Earth</a></li>
+        <li><a href="">Mars</a></li>
+        <li><a href="">Jupiter</a></li>
+        <li><a href="">Saturn</a></li>
+        <li><a href="">Uranus</a></li>
+        <li><a href="">Neptune</a></li>
+      </menu>
+    </header>
+    <main>
+      <nav>
+        <a href="">Overview</a>
+        <a href="">Structure</a>
+        <a href="">surface</a>
+      </nav>
+      <img src="./assets/planet-mercury.svg" alt="planet mercury" />
 
-    <!-- Overview Content End -->
+      <div>
+        <h1>Mercury</h1>
 
-    <!-- Internal Structure Content Start -->
+        <!-- Overview Content Start -->
+        <p>
+          Mercury is the smallest planet in the Solar System and the closest to
+          the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest
+          of all the Sun's planets. Mercury is one of four terrestrial planets
+          in the Solar System, and is a rocky body like Earth. Source :
+          Wikipedia
+        </p>
+        <p>
+          <!-- Internal Structure Content Start -->
 
-    Mercury appears to have a solid silicate crust and mantle overlying a solid,
-    iron sulfide outer core layer, a deeper liquid core layer, and a solid inner
-    core. The planet's density is the second highest in the Solar System at
-    5.427 g/cm3 , only slightly less than Earth's density. Source : Wikipedia
-    <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure -->
+          Mercury appears to have a solid silicate crust and mantle overlying a
+          solid, iron sulfide outer core layer, a deeper liquid core layer, and
+          a solid inner core. The planet's density is the second highest in the
+          Solar System at 5.427 g/cm3 , only slightly less than Earth's density.
+          Source : Wikipedia
+          <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure -->
+        </p>
 
-    <!-- Internal Structure Content End -->
+        <!-- Internal Structure Content End -->
 
-    <!-- Surface Geology Content Start -->
+        <p>
+          <!-- Surface Geology Content Start -->
 
-    Mercury's surface is similar in appearance to that of the Moon, showing
-    extensive mare-like plains and heavy cratering, indicating that it has been
-    geologically inactive for billions of years. It is more heterogeneous than
-    either Mars's or the Moon’s. Source : Wikipedia
-    <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
+          Mercury's surface is similar in appearance to that of the Moon,
+          showing extensive mare-like plains and heavy cratering, indicating
+          that it has been geologically inactive for billions of years. It is
+          more heterogeneous than either Mars's or the Moon’s. Source :
+          Wikipedia
+          <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
 
-    <!-- Surface Geology Content End -->
+          <!-- Surface Geology Content End -->
+        </p>
+        <p>
+          Source:
+          <a href=" https://en.wikipedia.org/wiki/Mercury_(planet)">
+            Wikipedia
+            <img src="./assets/icon-source.svg" alt="Source" />
+          </a>
+        </p>
+        <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) -->
+        <!-- Overview Content End -->
+      </div>
 
-    01 Overview 02 Internal Structure 03 Surface Geology Rotation Time 58.6 Days
-    Revolution Time 87.97 Days Radius 2,439.7 KM Average Temp. 430°c
+      <div>
+        <label>
+          <input type="radio" name="choices" id="overview" />
+          <span>01</span>
+          Overview
+        </label>
+        <label>
+          <input type="radio" name="choices" id="structure" />
+          <span>02</span>
+          Internal Structure
+        </label>
+        <label>
+          <input type="radio" name="choices" id="surface" />
+          <span>03</span>
+          Surface Geology
+        </label>
+      </div>
+
+      <div>
+        <p>Rotation Time</p>
+        <p>58.6 Days</p>
+      </div>
+      <div>
+        <p>Revolution Time</p>
+        <p>87.97 Days</p>
+      </div>
+      <div>
+        <p>Radius</p>
+        <p>2,439.7 KM</p>
+      </div>
+      <div>
+        <p>Average Temp.</p>
+        <p>430°c</p>
+      </div>
+    </main>
   </body>
 </html>
