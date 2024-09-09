@@ -143,7 +143,7 @@ header {
     border-bottom: 0.0625rem solid var(--gray);
     gap: 1.5625rem;
     padding-block: 1.25rem;
-    & a {
+    & button {
       line-height: 1.66;
       letter-spacing: 0.085rem;
       font-size: 0.9375rem;

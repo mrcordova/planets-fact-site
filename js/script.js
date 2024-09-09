@@ -6,13 +6,13 @@ const source = document.querySelector("#source>a");
 const paraInfo = document.getElementById("overview-para");
 const mobileMenu = document.getElementById("mobile-menu");
 const planets = {};
-let currentPlanet = "Mercury";
+let currentPlanetName = "Mercury";
 for (const planet of data) {
   //   console.log(planet);
   planets[planet.name] = planet;
 }
 
-console.log(planets[currentPlanet]);
+console.log(planets[currentPlanetName]);
 
 mobileTabs.addEventListener("click", (e) => {
   //   e.preventDefault();
@@ -22,19 +22,20 @@ mobileTabs.addEventListener("click", (e) => {
     e.target.classList.toggle("current-tab", true);
     currentTab = e.target;
 
-    const tempPlanet = planets[currentPlanet];
+    const tempPlanet = planets[currentPlanetName];
     // currentPlanet = tempPlanet.name;
     paraInfo.textContent = tempPlanet[currentTab.dataset.name].content;
-    console.log(tempPlanet[currentTab.dataset.name].source);
+    // console.log(tempPlanet[currentTab.dataset.name].source);
     source.setAttribute("href", tempPlanet[currentTab.dataset.name].source);
   }
 });
 
-console.log(mobileMenu);
+// console.log(mobileMenu);
 mobileMenu.addEventListener("click", (e) => {
   e.preventDefault();
   const planetNameEle = e.target.closest("li");
   if (planetNameEle) {
-    console.log(planetNameEle.dataset.name);
+    // console.log(planetNameEle.dataset.name);
+    currentPlanetName = planetNameEle.dataset.name;
   }
 });
