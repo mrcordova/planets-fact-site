@@ -31,8 +31,11 @@
   --saturn: #cd5120;
   --uranus: #1ec1a2;
   --neptune: #2d68f0;
+
+  --planet-color: var(--mercury);
 }
-a {
+a,
+button {
   color: var(--gray);
   text-decoration: none;
   text-transform: uppercase;
@@ -193,11 +196,16 @@ header {
   /* Mobile */
   padding-inline: 1.5rem;
 
-  & a {
+  & button {
     padding-block: 1.25rem 1.0625rem;
+    border-bottom: 0.25rem solid transparent;
     &.current-tab {
-      border-bottom: 0.25rem solid var(--mercury);
+      border-bottom: 0.25rem solid var(--planet-color);
       color: var(--white);
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
