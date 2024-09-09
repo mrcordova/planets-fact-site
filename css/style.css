@@ -23,7 +23,14 @@
   --bg: #070724;
   --white: #ffffff;
   --gray: #979797;
-  --teal: #419ebb;
+  --mercury: #419ebb;
+  --venus: #eda249;
+  --earth: #6d2ed5;
+  --mars: #d14c32;
+  --jupiter: #d83a34;
+  --saturn: #cd5120;
+  --uranus: #1ec1a2;
+  --neptune: #2d68f0;
 }
 a {
   color: var(--gray);
@@ -115,7 +122,7 @@ header {
   & a {
     padding-block: 1.25rem 1.0625rem;
     &.current-tab {
-      border-bottom: 0.25rem solid var(--teal);
+      border-bottom: 0.25rem solid var(--mercury);
       color: var(--white);
     }
   }
