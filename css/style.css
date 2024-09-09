@@ -54,6 +54,22 @@ header {
   padding-block: 1rem;
   justify-content: space-between;
 }
+#content {
+  display: grid;
+  grid-template-areas:
+    "img img"
+    "content-info content-info"
+    "rot rot"
+    "rev rev"
+    "rad rad"
+    "temp temp";
+
+  /* Mobile */
+  padding-inline: 1.5rem;
+}
+.content-info {
+  grid-area: content-info;
+}
 #desktop-tabs {
   display: none;
 }
@@ -76,4 +92,36 @@ header {
 .logo {
   font-size: 1.75rem;
   letter-spacing: -0.065625rem;
+}
+.para {
+  display: none;
+}
+.current-info {
+  display: block;
+}
+#planet {
+  /* Mobile */
+  width: 6.9375rem;
+}
+
+#planet-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: img;
+  /* Mobile */
+  height: 19rem;
+}
+
+#rot-con {
+  grid-area: rot;
+}
+#rev-con {
+  grid-area: rev;
+}
+#rad-con {
+  grid-area: rad;
+}
+#temp-con {
+  grid-area: temp;
 }
