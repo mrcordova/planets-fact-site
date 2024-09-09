@@ -4,6 +4,7 @@ let currentTab = document.querySelector(".current-tab");
 const mobileTabs = document.getElementById("mobile-tabs");
 const source = document.querySelector("#source>a");
 const paraInfo = document.getElementById("overview-para");
+const mobileMenu = document.getElementById("mobile-menu");
 const planets = {};
 let currentPlanet = "Mercury";
 for (const planet of data) {
@@ -26,5 +27,14 @@ mobileTabs.addEventListener("click", (e) => {
     paraInfo.textContent = tempPlanet[currentTab.dataset.name].content;
     console.log(tempPlanet[currentTab.dataset.name].source);
     source.setAttribute("href", tempPlanet[currentTab.dataset.name].source);
+  }
+});
+
+console.log(mobileMenu);
+mobileMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  const planetNameEle = e.target.closest("li");
+  if (planetNameEle) {
+    console.log(planetNameEle.dataset.name);
   }
 });

@@ -186,6 +186,10 @@ header {
         background-color: var(--neptune);
       }
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 #mobile-tabs {
