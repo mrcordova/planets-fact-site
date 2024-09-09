@@ -30,6 +30,13 @@ body {
 }
 header {
   display: flex;
+  /* Mobile */
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  justify-content: space-between;
+}
+#desktop-tabs {
+  display: none;
 }
 .logo {
   font-size: 1.75rem;
