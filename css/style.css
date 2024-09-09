@@ -55,6 +55,10 @@ body {
   color: var(--white);
 }
 header {
+  /* position: sticky; */
+  top: 0rem;
+  /* background-color: var(--bg);
+   */
   display: flex;
   /* Mobile */
   padding-inline: 1.5rem;
@@ -110,6 +114,76 @@ header {
 }
 #desktop-tabs {
   display: none;
+}
+
+#mobile-menu:popover-open {
+  border: 0;
+  position: fixed;
+
+  background-color: var(--bg);
+  top: 5rem;
+  bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  list-style: none;
+
+  padding-inline: 1.5rem;
+  padding-block-start: 2.75rem3;
+
+  & li {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 0.0625rem solid var(--gray);
+    gap: 1.5625rem;
+    padding-block: 1.25rem;
+    & a {
+      line-height: 1.66;
+      letter-spacing: 0.085rem;
+      font-size: 0.9375rem;
+      color: var(--white);
+    }
+
+    & img {
+      margin-inline-start: auto;
+    }
+    & div {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+    }
+
+    &:first-child > div {
+      background-color: var(--mercury);
+    }
+    &:nth-child(2) > div {
+      background-color: var(--venus);
+    }
+    &:nth-child(3) > div {
+      background-color: var(--earth);
+    }
+    &:nth-child(4) > div {
+      background-color: var(--mars);
+    }
+    &:nth-child(5) > div {
+      background-color: var(--jupiter);
+    }
+    &:nth-child(6) > div {
+      background-color: var(--saturn);
+    }
+    &:nth-child(7) > div {
+      background-color: var(--uranus);
+    }
+    &:nth-child(8) {
+      border: 0;
+      > div {
+        background-color: var(--neptune);
+      }
+    }
+  }
 }
 #mobile-tabs {
   border-top: 1px solid var(--gray);
