@@ -314,6 +314,9 @@ header {
   /* Tablet */
   gap: 0.6875rem;
   margin-block-end: 2.25rem;
+  /* Desktop */
+  gap: 1.875rem;
+  margin-block-end: 2.25rem;
 
   & div {
     display: flex;
@@ -329,11 +332,14 @@ header {
     /* Tablet  */
     padding-inline: 0.9375rem 4.3125rem;
     padding-block: 1rem 1.1875rem;
-    /* margin-block-end: 0.5rem; */
 
     & p:first-child {
       font-size: 0.5rem;
       line-height: 2;
+      letter-spacing: 0.045625rem;
+      /* Desktop */
+      font-size: 0.6875rem;
+      line-height: 1.5625;
       letter-spacing: 0.045625rem;
     }
 
@@ -344,6 +350,9 @@ header {
       /* Tablet */
       font-size: 1.5rem;
       letter-spacing: -0.05625rem;
+      /* Tablet */
+      font-size: 2.5rem;
+      letter-spacing: -0.09375rem;
     }
   }
 }
@@ -451,16 +460,6 @@ header {
       flex-direction: column;
 
       align-items: flex-start;
-      & p:first-child {
-        font-size: 0.5rem;
-        line-height: 2;
-        letter-spacing: 0.045625rem;
-      }
-
-      & p:nth-child(2) {
-        font-size: 1.25rem;
-        letter-spacing: -0.046875rem;
-      }
     }
   }
 }
