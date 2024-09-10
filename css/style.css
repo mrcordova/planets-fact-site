@@ -295,3 +295,33 @@ header {
     letter-spacing: -0.046875rem;
   }
 }
+@media (min-width: 48rem) {
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--gray);
+    /* tablet */
+    gap: 2.4375rem;
+  }
+  #hamburger-btn {
+    display: none;
+  }
+
+  #desktop-tabs {
+    display: block;
+
+    & > #desktop-menu {
+      display: flex;
+
+      /* flex-wrap: wrap; */
+      list-style: none;
+      /* Mobile */
+      font-size: 0.6875rem;
+      gap: 2.0625rem;
+    }
+  }
+
+  #mobile-tabs {
+    display: none;
+  }
+}
