@@ -55,7 +55,7 @@ function updateParaInfo(e) {
     currentPlanetName = planetNameEle.dataset.name;
     const planetHeader = document.querySelector(".content-info>h1");
     planetHeader.textContent = planets[currentPlanetName].name;
-    console.log(planets[currentPlanetName]);
+    // console.log(planets[currentPlanetName]);
     paraInfo.textContent = planets[currentPlanetName][currentTab].content;
     source.setAttribute("href", planets[currentPlanetName][currentTab].source);
 
@@ -80,7 +80,7 @@ function updateParaInfo(e) {
   }
   // };
 }
-console.log(planets[currentPlanetName]);
+// console.log(planets[currentPlanetName]);
 
 mobileTabs.addEventListener("click", updateTabs);
 desktopTabs.addEventListener("click", updateTabs);
