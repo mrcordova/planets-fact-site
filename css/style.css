@@ -92,13 +92,13 @@ header {
   display: flex;
   /* Mobile */
   padding-inline: 1.5rem;
-  /* padding-block: 1rem; */
+  padding-block: 1rem;
   justify-content: space-between;
   /* Tablet */
-  /* padding-block: 2rem 1.6875rem; */
+  padding-block: 2rem 1.6875rem;
   padding-inline: 3.1875rem;
   /* Desktop */
-  /* padding-block: 2rem 1.6875rem; */
+  padding-block: 0;
   padding-inline: 2rem 2.5rem;
 }
 #content {

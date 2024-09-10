@@ -35,8 +35,8 @@ function updateTabs(e) {
     }
     const img = content.querySelector("#planet");
     const geoImg = content.querySelector("#geology");
-    console.log(e.target.parentElement.id);
-    if (currentTab === "geology" && e.target.parentElement.id) {
+    // console.log(e.target.parentElement.id);
+    if (currentTab === "geology") {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
       geoImg.setAttribute("src", planets[currentPlanetName].images["geology"]);
       geoImg.classList.toggle("show", true);
@@ -44,6 +44,9 @@ function updateTabs(e) {
       img.setAttribute("src", planets[currentPlanetName].images["internal"]);
       geoImg.classList.toggle("show", false);
     } else if (currentTab === "overview") {
+      img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+      geoImg.classList.toggle("show", false);
+    } else {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
       geoImg.classList.toggle("show", false);
     }
@@ -87,10 +90,7 @@ function updateParaInfo(e) {
     const img = content.querySelector("#planet");
     const geoImg = content.querySelector("#geology");
     console.log(e.target.parentElement.id);
-    if (
-      currentTab === "geology" &&
-      planetNameEle.parentElement.id == "desktop-menu"
-    ) {
+    if (currentTab === "geology") {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
       geoImg.setAttribute("src", planets[currentPlanetName].images["geology"]);
       geoImg.classList.toggle("show", true);
@@ -100,6 +100,9 @@ function updateParaInfo(e) {
     } else if (currentTab === "overview") {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
       geoImg.classList.toggle("show", false);
+    } else {
+      geoImg.classList.toggle("show", false);
+      img.setAttribute("src", planets[currentPlanetName].images["planet"]);
     }
     for (const stat of stats) {
       stat.children[1].textContent = `${
