@@ -1,7 +1,8 @@
 const dataResponse = await fetch("../data.json");
 const data = await dataResponse.json();
-let currentTab = document.querySelector(".current-tab");
+let currentTab = document.querySelector(".current-tab").dataset.name;
 const mobileTabs = document.getElementById("mobile-tabs");
+const desktopTabs = document.getElementById("desktop-tabs");
 const source = document.querySelector("#source>a");
 const paraInfo = document.getElementById("overview-para");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -17,23 +18,35 @@ for (const planet of data) {
   planets[planet.name] = planet;
 }
 
-console.log(planets[currentPlanetName]);
-
-mobileTabs.addEventListener("click", (e) => {
+function updateParaInfo(e) {
+  //   (e) => {
   //   e.preventDefault();
   //   console.log(e.target.tagName);
   if (e.target.tagName == "BUTTON") {
-    currentTab.classList.toggle("current-tab", false);
-    e.target.classList.toggle("current-tab", true);
-    currentTab = e.target;
+    let currentTabs = document.querySelectorAll(`[data-name='${currentTab}']`);
+    for (const currentTab of currentTabs) {
+      currentTab.classList.toggle("current-tab", false);
+    }
+    currentTab = e.target.dataset.name;
+    let newTabs = document.querySelectorAll(`[data-name='${currentTab}']`);
+    for (const newTab of newTabs) {
+      newTab.classList.toggle("current-tab", true);
+    }
+    // currentTab.classList.toggle("current-tab", false);
+    // currentTab = e.target;
 
     const tempPlanet = planets[currentPlanetName];
     // currentPlanet = tempPlanet.name;
-    paraInfo.textContent = tempPlanet[currentTab.dataset.name].content;
+    paraInfo.textContent = tempPlanet[currentTab].content;
     // console.log(tempPlanet[currentTab.dataset.name].source);
-    source.setAttribute("href", tempPlanet[currentTab.dataset.name].source);
+    source.setAttribute("href", tempPlanet[currentTab].source);
   }
-});
+  //   };
+}
+console.log(planets[currentPlanetName]);
+
+mobileTabs.addEventListener("click", updateParaInfo);
+desktopTabs.addEventListener("click", updateParaInfo);
 
 // console.log(mobileMenu);
 mobileMenu.addEventListener("click", (e) => {
@@ -46,12 +59,8 @@ mobileMenu.addEventListener("click", (e) => {
     const planetHeader = document.querySelector(".content-info>h1");
     planetHeader.textContent = planets[currentPlanetName].name;
     console.log(planets[currentPlanetName]);
-    paraInfo.textContent =
-      planets[currentPlanetName][currentTab.dataset.name].content;
-    source.setAttribute(
-      "href",
-      planets[currentPlanetName][currentTab.dataset.name].source
-    );
+    paraInfo.textContent = planets[currentPlanetName][currentTab].content;
+    source.setAttribute("href", planets[currentPlanetName][currentTab].source);
 
     document.documentElement.setAttribute(
       "style",
@@ -59,11 +68,11 @@ mobileMenu.addEventListener("click", (e) => {
     );
 
     const img = content.querySelector("#planet");
-    if (currentTab.dataset.name === "geology") {
+    if (currentTab === "geology") {
       img.setAttribute("src", planets[currentPlanetName].images["geology"]);
-    } else if (currentTab.dataset.name === "structure") {
+    } else if (currentTab === "structure") {
       img.setAttribute("src", planets[currentPlanetName].images["internal"]);
-    } else if (currentTab.dataset.name === "overview") {
+    } else if (currentTab === "overview") {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
     }
     for (const stat of stats) {
