@@ -60,6 +60,7 @@ button {
     text-decoration: none;
   }
 }
+
 body {
   background: url(../assets/background-stars.svg), var(--bg);
 
@@ -127,6 +128,15 @@ header {
 }
 #desktop-tabs {
   display: none;
+}
+#hamburger-btn {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:has(+ #mobile-menu:popover-open) > svg > g {
+    fill: var(--gray);
+  }
 }
 
 #mobile-menu:popover-open {

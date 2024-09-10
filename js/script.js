@@ -8,6 +8,7 @@ const mobileMenu = document.getElementById("mobile-menu");
 const stats = document.querySelectorAll(
   "#rot-con, #rev-con, #rad-con, #temp-con"
 );
+const menuBtn = document.getElementById("hamburger-btn");
 const content = document.getElementById("content");
 const planets = {};
 let currentPlanetName = "Mercury";
