@@ -33,20 +33,28 @@
   --neptune: #2d68f0;
   --mercury-size: 6.9375rem;
   --mercury-size: 11.5rem;
+  --mercury-size: 18.125rem;
   --venus-size: 9.625rem;
   --venus-size: 15.8125rem;
+  --venus-size: 25rem;
   --earth-size: 10.8125rem;
   --earth-size: 17.8125rem;
+  --earth-size: 28.125rem;
   --mars-size: 8.0625rem;
   --mars-size: 13.3125rem;
+  --mars-size: 21rem;
   --jupiter-size: 14rem;
   --jupiter-size: 23.0625rem;
+  --jupiter-size: 36.375rem;
   --saturn-size: 16rem;
   --saturn-size: 26.375rem;
+  --saturn-size: 41.630625rem;
   --uranus-size: 11rem;
   --uranus-size: 18.125rem;
+  --uranus-size: 28.625rem;
   --neptune-size: 10.8125rem;
   --neptune-size: 17.8125rem;
+  --neptune-size: 28.125rem;
 
   --planet-color: var(--mercury);
   --planet-size: var(--mercury-size);
@@ -275,6 +283,8 @@ header {
   height: 19rem;
   /* TAblet */
   height: 28.75rem;
+  /*Desktop */
+  height: 47.125rem;
 }
 
 #stats {
@@ -434,5 +444,14 @@ header {
         letter-spacing: -0.046875rem;
       }
     }
+  }
+}
+
+@media (min-width: 90rem) {
+  #content {
+    grid-template-areas:
+      "img img img content-info"
+      "img img img tabs"
+      "stats stats stats stats";
   }
 }
