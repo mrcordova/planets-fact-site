@@ -33,8 +33,20 @@ function updateTabs(e) {
     for (const newTab of newTabs) {
       newTab.classList.toggle("current-tab", true);
     }
-    // currentTab.classList.toggle("current-tab", false);
-    // currentTab = e.target;
+    const img = content.querySelector("#planet");
+    const geoImg = content.querySelector("#geology");
+    console.log(e.target.parentElement.id);
+    if (currentTab === "geology" && e.target.parentElement.id) {
+      img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+      geoImg.setAttribute("src", planets[currentPlanetName].images["geology"]);
+      geoImg.classList.toggle("show", true);
+    } else if (currentTab === "structure") {
+      img.setAttribute("src", planets[currentPlanetName].images["internal"]);
+      geoImg.classList.toggle("show", false);
+    } else if (currentTab === "overview") {
+      img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+      geoImg.classList.toggle("show", false);
+    }
 
     const tempPlanet = planets[currentPlanetName];
     // currentPlanet = tempPlanet.name;
@@ -64,20 +76,40 @@ function updateParaInfo(e) {
       `--planet-color: var(--${currentPlanetName.toLowerCase()}); --planet-size: var(--${currentPlanetName.toLowerCase()}-size)`
     );
 
+    // const img = content.querySelector("#planet");
+    // if (currentTab === "geology") {
+    //   img.setAttribute("src", planets[currentPlanetName].images["geology"]);
+    // } else if (currentTab === "structure") {
+    //   img.setAttribute("src", planets[currentPlanetName].images["internal"]);
+    // } else if (currentTab === "overview") {
+    //   img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+    // }
     const img = content.querySelector("#planet");
-    if (currentTab === "geology") {
-      img.setAttribute("src", planets[currentPlanetName].images["geology"]);
+    const geoImg = content.querySelector("#geology");
+    console.log(e.target.parentElement.id);
+    if (
+      currentTab === "geology" &&
+      planetNameEle.parentElement.id == "desktop-menu"
+    ) {
+      img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+      geoImg.setAttribute("src", planets[currentPlanetName].images["geology"]);
+      geoImg.classList.toggle("show", true);
     } else if (currentTab === "structure") {
       img.setAttribute("src", planets[currentPlanetName].images["internal"]);
+      geoImg.classList.toggle("show", false);
     } else if (currentTab === "overview") {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+      geoImg.classList.toggle("show", false);
     }
     for (const stat of stats) {
       stat.children[1].textContent = `${
         planets[currentPlanetName][stat.dataset.name]
       }`;
     }
-    planetNameEle.parentElement.hidePopover();
+
+    if (planetNameEle.parentElement.id == "mobile-menu") {
+      planetNameEle.parentElement.hidePopover();
+    }
   }
   // };
 }

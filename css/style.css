@@ -177,6 +177,10 @@ header {
     }
   }
 }
+
+.hide {
+  display: none;
+}
 #hamburger-btn {
   &:hover {
     cursor: pointer;
@@ -484,6 +488,9 @@ header {
     }
   }
 
+  #planet-con {
+    position: relative;
+  }
   #desktop-nav {
     & li {
       padding-block: 2.0625rem 1.6875rem;
@@ -496,6 +503,18 @@ header {
       "stats stats  stats";
   }
 
+  #geology {
+    /* display: block; */
+    position: absolute;
+    height: 12.4375rem;
+    top: 29.25rem;
+    bottom: 0;
+    left: 40%;
+    right: 0;
+  }
+  .show {
+    display: block;
+  }
   #planet-con {
     width: 47.5rem;
   }
