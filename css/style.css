@@ -92,11 +92,14 @@ header {
   display: flex;
   /* Mobile */
   padding-inline: 1.5rem;
-  padding-block: 1rem;
+  /* padding-block: 1rem; */
   justify-content: space-between;
   /* Tablet */
-  padding-block: 2rem 1.6875rem;
+  /* padding-block: 2rem 1.6875rem; */
   padding-inline: 3.1875rem;
+  /* Desktop */
+  /* padding-block: 2rem 1.6875rem; */
+  padding-inline: 2rem 2.5rem;
 }
 #content {
   display: grid;
@@ -109,6 +112,8 @@ header {
   padding-inline: 1.5rem;
   /* TAblet */
   padding-inline: 2.4375rem 2.5rem;
+  /* Desktop */
+  padding-inline: 10.3125rem;
 }
 .content-info {
   grid-area: content-info;
@@ -448,6 +453,19 @@ header {
 }
 
 @media (min-width: 90rem) {
+  header {
+    justify-content: space-between;
+
+    & > p {
+      padding-block: 1.375rem 1.6875rem;
+    }
+  }
+
+  #desktop-nav {
+    & li {
+      padding-block: 2.0625rem 1.6875rem;
+    }
+  }
   #content {
     grid-template-areas:
       "img img img content-info"
