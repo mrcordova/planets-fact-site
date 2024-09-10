@@ -128,11 +128,18 @@ header {
     /* Tablet */
     font-size: 3rem;
     padding-block-end: 1.5rem;
+    /* DEsktop */
+    font-size: 5rem;
+    padding-block-end: 1.4375rem;
   }
 
   & p {
+    /* Mobile */
     font-size: 0.6875rem;
     line-height: 2;
+    /* Desktop */
+    font-size: 0.875rem;
+    line-height: 1.78;
   }
 
   #source {
@@ -143,6 +150,10 @@ header {
     padding-block: 2rem 1.75rem;
     font-size: 0.75rem;
     line-height: 2.083;
+    /* Dekstop */
+    padding-block: 1.5rem 2.4375rem;
+    font-size: 0.875rem;
+    line-height: 1.78;
 
     & a {
       display: flex;
@@ -339,8 +350,10 @@ header {
 
 @media (min-width: 48rem) {
   header {
-    justify-content: center;
-    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     border-bottom: 1px solid var(--gray);
     /* tablet */
     gap: 2.4375rem;
@@ -454,6 +467,7 @@ header {
 
 @media (min-width: 90rem) {
   header {
+    flex-direction: row;
     justify-content: space-between;
 
     & > p {
@@ -468,8 +482,20 @@ header {
   }
   #content {
     grid-template-areas:
-      "img img img content-info"
-      "img img img tabs"
-      "stats stats stats stats";
+      "img img content-info"
+      "img img  tabs"
+      "stats stats  stats";
+  }
+
+  #planet-con {
+    width: 47.5rem;
+  }
+
+  .content-info {
+    justify-content: flex-end;
+  }
+
+  #desktop-tabs {
+    justify-content: flex-start;
   }
 }
