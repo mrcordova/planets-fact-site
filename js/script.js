@@ -40,6 +40,7 @@ mobileMenu.addEventListener("click", (e) => {
   const planetNameEle = e.target.closest("li");
   if (planetNameEle) {
     // console.log(planetNameEle.dataset.name);
+
     currentPlanetName = planetNameEle.dataset.name;
     const planetHeader = document.querySelector(".content-info>h1");
     planetHeader.textContent = planets[currentPlanetName].name;
@@ -50,6 +51,20 @@ mobileMenu.addEventListener("click", (e) => {
       "href",
       planets[currentPlanetName][currentTab.dataset.name].source
     );
+
+    document.documentElement.setAttribute(
+      "style",
+      `--planet-color: var(--${currentPlanetName.toLowerCase()}); --planet-size: var(--${currentPlanetName.toLowerCase()}-size)`
+    );
+
+    const img = content.querySelector("#planet");
+    if (currentTab.dataset.name === "geology") {
+      img.setAttribute("src", planets[currentPlanetName].images["geology"]);
+    } else if (currentTab.dataset.name === "structure") {
+      img.setAttribute("src", planets[currentPlanetName].images["internal"]);
+    } else if (currentTab.dataset.name === "overview") {
+      img.setAttribute("src", planets[currentPlanetName].images["planet"]);
+    }
     for (const stat of stats) {
       stat.children[1].textContent = `${
         planets[currentPlanetName][stat.dataset.name]

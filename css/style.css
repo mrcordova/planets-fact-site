@@ -31,8 +31,18 @@
   --saturn: #cd5120;
   --uranus: #1ec1a2;
   --neptune: #2d68f0;
+  --mercury-size: 6.9375rem;
+  --venus-size: 9.625rem;
+  --earth-size: 10.8125rem;
+  --mars-size: 8.0625rem;
+  --jupiter-size: 14rem;
+  --saturn-size: 16rem;
+  --uranus-size: 11rem;
+  --neptune-size: 10.8125rem;
 
   --planet-color: var(--mercury);
+  --planet-size: var(--mercury-size);
+  /* --planet-img: var() */
 }
 a,
 button {
@@ -225,7 +235,7 @@ header {
 }
 #planet {
   /* Mobile */
-  width: 6.9375rem;
+  width: var(--planet-size);
 }
 
 #planet-con {
