@@ -95,10 +95,7 @@ header {
   grid-template-areas:
     "img img"
     "content-info content-info"
-    "rot rot"
-    "rev rev"
-    "rad rad"
-    "temp temp";
+    "stats stats";
 
   /* Mobile */
   padding-inline: 1.5rem;
@@ -280,44 +277,51 @@ header {
   height: 28.75rem;
 }
 
-#rot-con {
-  grid-area: rot;
-}
-#rev-con {
-  grid-area: rev;
-}
-#rad-con {
-  grid-area: rad;
-}
-#temp-con {
-  grid-area: temp;
-}
-#rot-con,
-#rev-con,
-#rad-con,
-#temp-con {
+#stats {
   display: flex;
+  flex-direction: column;
+  grid-area: stats;
+
   justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-
   /* Mobile */
-  padding-inline: 1.5rem;
-  padding-block: 0.5625rem 0.8125rem;
-  margin-block-end: 0.5rem;
-  border: 1px solid #d8d8d8;
+  gap: 0.5rem;
+  /* Tablet */
+  gap: 0.6875rem;
+  margin-block-end: 2.25rem;
 
-  & p:first-child {
-    font-size: 0.5rem;
-    line-height: 2;
-    letter-spacing: 0.045625rem;
-  }
+  & div {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    border: 1px solid var(--white);
 
-  & p:nth-child(2) {
-    font-size: 1.25rem;
-    letter-spacing: -0.046875rem;
+    /* Mobile */
+    padding-inline: 1.5rem;
+    padding-block: 0.5625rem 0.8125rem;
+    /* Tablet  */
+    padding-inline: 0.9375rem 4.3125rem;
+    padding-block: 1rem 1.1875rem;
+    /* margin-block-end: 0.5rem; */
+
+    & p:first-child {
+      font-size: 0.5rem;
+      line-height: 2;
+      letter-spacing: 0.045625rem;
+    }
+
+    & p:nth-child(2) {
+      /* Mobile */
+      font-size: 1.25rem;
+      letter-spacing: -0.046875rem;
+      /* Tablet */
+      font-size: 1.5rem;
+      letter-spacing: -0.05625rem;
+    }
   }
 }
+
 @media (min-width: 48rem) {
   header {
     justify-content: center;
@@ -331,7 +335,7 @@ header {
     grid-template-areas:
       "img img img img"
       "content-info content-info tabs tabs"
-      "rot rev rad temp";
+      "stats stats stats stats";
   }
   .content-info {
     text-align: left;
@@ -412,24 +416,23 @@ header {
   #mobile-tabs {
     display: none;
   }
+  #stats {
+    flex-direction: row;
+    div {
+      display: flex;
+      flex-direction: column;
 
-  #rot-con,
-  #rev-con,
-  #rad-con,
-  #temp-con {
-    display: flex;
-    flex-direction: column;
+      align-items: flex-start;
+      & p:first-child {
+        font-size: 0.5rem;
+        line-height: 2;
+        letter-spacing: 0.045625rem;
+      }
 
-    align-items: flex-start;
-    & p:first-child {
-      font-size: 0.5rem;
-      line-height: 2;
-      letter-spacing: 0.045625rem;
-    }
-
-    & p:nth-child(2) {
-      font-size: 1.25rem;
-      letter-spacing: -0.046875rem;
+      & p:nth-child(2) {
+        font-size: 1.25rem;
+        letter-spacing: -0.046875rem;
+      }
     }
   }
 }
