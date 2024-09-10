@@ -167,6 +167,16 @@ header {
 #desktop-nav {
   display: none;
 }
+
+#desktop-nav {
+  & li {
+    border-top: 0.25rem solid transparent;
+    &:is(:hover, :active) {
+      cursor: pointer;
+      border-top: 0.25rem solid var(--planet-color);
+    }
+  }
+}
 #hamburger-btn {
   &:hover {
     cursor: pointer;
