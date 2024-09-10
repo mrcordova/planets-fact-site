@@ -1,4 +1,4 @@
-const dataResponse = await fetch("../data.json");
+const dataResponse = await fetch("data.json");
 const data = await dataResponse.json();
 let currentTab = document.querySelector(".current-tab").dataset.name;
 const mobileTabs = document.getElementById("mobile-tabs");
