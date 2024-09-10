@@ -103,7 +103,7 @@ header {
   /* Mobile */
   padding-inline: 1.5rem;
   /* TAblet */
-  padding-inline: 4.125rem;
+  padding-inline: 2.4375rem 2.5rem;
 }
 .content-info {
   grid-area: content-info;
@@ -115,6 +115,9 @@ header {
     /* Mobile */
     font-size: 2.5rem;
     padding-block-end: 1rem;
+    /* Tablet */
+    font-size: 3rem;
+    padding-block-end: 1.5rem;
   }
 
   & p {
@@ -269,6 +272,8 @@ header {
   grid-area: img;
   /* Mobile */
   height: 19rem;
+  /* TAblet */
+  height: 28.75rem;
 }
 
 #rot-con {
@@ -327,6 +332,13 @@ header {
   .content-info {
     text-align: left;
     align-items: flex-start;
+
+    #source {
+      justify-content: flex-start;
+    }
+    & p {
+      width: 38ch;
+    }
   }
   #hamburger-btn {
     display: none;
@@ -342,9 +354,18 @@ header {
 
       /* flex-wrap: wrap; */
       list-style: none;
-      /* Mobile */
+      /* Tablet */
       font-size: 0.6875rem;
+      letter-spacing: 0.0625rem;
       gap: 2.0625rem;
+      line-height: 2.27;
+
+      & button {
+        color: var(--white);
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 
@@ -354,6 +375,26 @@ header {
     flex-direction: column;
 
     justify-content: center;
+
+    & button {
+      display: flex;
+      gap: 1.0625rem;
+      border: 0.0625rem solid var(--gray);
+      padding-block: 0.5rem 0.4375rem;
+      padding-inline: 1.25rem;
+      line-height: 2.77;
+      letter-spacing: 0.120625rem;
+      color: var(--white);
+
+      margin-block-end: 1rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+      & span {
+        color: var(--gray);
+      }
+    }
   }
 
   #mobile-tabs {
