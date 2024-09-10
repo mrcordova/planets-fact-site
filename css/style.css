@@ -177,6 +177,7 @@ header {
     display: flex;
     align-items: center;
 
+    border: 0.0625rem solid transparent;
     border-bottom: 0.0625rem solid var(--gray);
     gap: 1.5625rem;
     padding-block: 1.25rem;
@@ -226,6 +227,9 @@ header {
 
     &:hover {
       cursor: pointer;
+    }
+    &:active {
+      border: 1px solid var(--planet-color);
     }
   }
 }

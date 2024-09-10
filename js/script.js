@@ -77,6 +77,7 @@ function updateParaInfo(e) {
         planets[currentPlanetName][stat.dataset.name]
       }`;
     }
+    planetNameEle.parentElement.hidePopover();
   }
   // };
 }
