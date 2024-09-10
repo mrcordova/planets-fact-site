@@ -493,6 +493,10 @@ header {
 
   .content-info {
     justify-content: flex-end;
+
+    & p {
+      width: 30ch;
+    }
   }
 
   #desktop-tabs {
