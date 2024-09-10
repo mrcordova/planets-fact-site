@@ -6,6 +6,7 @@ const desktopTabs = document.getElementById("desktop-tabs");
 const source = document.querySelector("#source>a");
 const paraInfo = document.getElementById("overview-para");
 const mobileMenu = document.getElementById("mobile-menu");
+const desktopMenu = document.getElementById("desktop-menu");
 const stats = document.querySelectorAll(
   "#rot-con, #rev-con, #rad-con, #temp-con"
 );
@@ -18,7 +19,7 @@ for (const planet of data) {
   planets[planet.name] = planet;
 }
 
-function updateParaInfo(e) {
+function updateTabs(e) {
   //   (e) => {
   //   e.preventDefault();
   //   console.log(e.target.tagName);
@@ -43,13 +44,9 @@ function updateParaInfo(e) {
   }
   //   };
 }
-console.log(planets[currentPlanetName]);
 
-mobileTabs.addEventListener("click", updateParaInfo);
-desktopTabs.addEventListener("click", updateParaInfo);
-
-// console.log(mobileMenu);
-mobileMenu.addEventListener("click", (e) => {
+function updateParaInfo(e) {
+  // (e) => {
   e.preventDefault();
   const planetNameEle = e.target.closest("li");
   if (planetNameEle) {
@@ -81,4 +78,13 @@ mobileMenu.addEventListener("click", (e) => {
       }`;
     }
   }
-});
+  // };
+}
+console.log(planets[currentPlanetName]);
+
+mobileTabs.addEventListener("click", updateTabs);
+desktopTabs.addEventListener("click", updateTabs);
+
+// console.log(mobileMenu);
+mobileMenu.addEventListener("click", updateParaInfo);
+desktopMenu.addEventListener("click", updateParaInfo);
