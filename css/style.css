@@ -60,6 +60,12 @@
   --planet-size: var(--mercury-size);
   /* --planet-img: var() */
 }
+
+html {
+  max-width: 90rem;
+  margin: 0 auto;
+  height: 100%;
+}
 a,
 button {
   color: var(--gray);
@@ -78,6 +84,7 @@ button {
 }
 
 body {
+  min-height: 100%;
   background: url(../assets/background-stars.svg), var(--bg);
 
   background-position: right;

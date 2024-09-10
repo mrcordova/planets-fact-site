@@ -89,7 +89,7 @@ function updateParaInfo(e) {
     // }
     const img = content.querySelector("#planet");
     const geoImg = content.querySelector("#geology");
-    console.log(e.target.parentElement.id);
+    // console.log(e.target.parentElement.id);
     if (currentTab === "geology") {
       img.setAttribute("src", planets[currentPlanetName].images["planet"]);
       geoImg.setAttribute("src", planets[currentPlanetName].images["geology"]);
