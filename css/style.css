@@ -395,6 +395,14 @@ header {
         color: var(--gray);
       }
     }
+
+    & .current-tab {
+      background-color: var(--planet-color);
+
+      & span {
+        color: var(--white);
+      }
+    }
   }
 
   #mobile-tabs {
