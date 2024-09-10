@@ -78,6 +78,8 @@ header {
   padding-inline: 1.5rem;
   padding-block: 1rem;
   justify-content: space-between;
+  /* Tablet */
+  padding-block: 2rem 1.6875rem;
 }
 #content {
   display: grid;
@@ -303,13 +305,26 @@ header {
     /* tablet */
     gap: 2.4375rem;
   }
+
+  #content {
+    grid-template-areas:
+      "img img img img"
+      "content-info content-info tabs tabs"
+      "rot rev rad temp";
+  }
+  .content-info {
+    text-align: left;
+    align-items: flex-start;
+  }
   #hamburger-btn {
     display: none;
   }
 
-  #desktop-tabs {
-    display: block;
+  #desktop-nav {
+    display: flex;
+    flex-direction: column;
 
+    grid-area: tabs;
     & > #desktop-menu {
       display: flex;
 
@@ -321,7 +336,35 @@ header {
     }
   }
 
+  #desktop-tabs {
+    grid-area: tabs;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
   #mobile-tabs {
     display: none;
+  }
+
+  #rot-con,
+  #rev-con,
+  #rad-con,
+  #temp-con {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    & p:first-child {
+      font-size: 0.5rem;
+      line-height: 2;
+      letter-spacing: 0.045625rem;
+    }
+
+    & p:nth-child(2) {
+      font-size: 1.25rem;
+      letter-spacing: -0.046875rem;
+    }
   }
 }

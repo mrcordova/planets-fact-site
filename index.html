@@ -18,19 +18,22 @@
     <header>
       <p class="antonio-medium logo">THE PLANETS</p>
 
-      <nav id="desktop-tabs">
+      <nav id="desktop-nav">
         <menu id="desktop-menu" class="spartan-bold">
           <li data-name="Mercury"><button>Mercury</button></li>
           <li data-name="Venus"><button>Venus</button></li>
           <li data-name="Earth"><button>Earth</button></li>
-          <li data-name="Mars""><button>Mars</button></li>
+          <li data-name="Mars"><button>Mars</button></li>
           <li data-name="Jupiter"><button>Jupiter</button></li>
           <li data-name="Saturn"><button>Saturn</button></li>
           <li data-name="Uranus"><button>Uranus</button></li>
           <li data-name="Neptune"><button>Neptune</button></li>
         </menu>
       </nav>
-      <button id="hamburger-btn" popovertarget="mobile-menu" popovertargetaction="toggle">
+      <button
+        id="hamburger-btn"
+        popovertarget="mobile-menu"
+        popovertargetaction="toggle">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
           <g fill="#FFF" fill-rule="evenodd">
             <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
@@ -39,22 +42,22 @@
       </button>
 
       <menu id="mobile-menu" class="spartan-bold" popover>
-        <li  data-name="Mercury">
+        <li data-name="Mercury">
           <div></div>
           <button>Mercury</button>
           <img src="./assets/icon-chevron.svg" alt="arrow" />
         </li>
-        <li  data-name="Venus">
+        <li data-name="Venus">
           <div></div>
           <button>Venus</button>
           <img src="./assets/icon-chevron.svg" alt="arrow" />
         </li>
-        <li  data-name="Earth">
+        <li data-name="Earth">
           <div></div>
           <button>Earth</button>
           <img src="./assets/icon-chevron.svg" alt="arrow" />
         </li>
-        <li  data-name="Mars">
+        <li data-name="Mars">
           <div></div>
           <button>Mars</button>
           <img src="./assets/icon-chevron.svg" alt="arrow" />
@@ -143,23 +146,20 @@
           <!-- Overview Content End -->
         </div>
 
-        <div id="desktop-tabs">
-          <label>
-            <input type="radio" name="choices" id="overview" />
+        <nav id="desktop-tabs" class="spartan-bold">
+          <button class="current-tab" data-name="overview">
             <span>01</span>
             Overview
-          </label>
-          <label>
-            <input type="radio" name="choices" id="structure" />
+          </button>
+          <button data-name="structure">
             <span>02</span>
             Internal Structure
-          </label>
-          <label>
-            <input type="radio" name="choices" id="surface" />
+          </button>
+          <button data-name="geology">
             <span>03</span>
             Surface Geology
-          </label>
-        </div>
+          </button>
+        </nav>
 
         <div id="rot-con" data-name="rotation">
           <p class="spartan-bold">Rotation Time</p>
