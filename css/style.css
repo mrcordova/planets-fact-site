@@ -32,13 +32,21 @@
   --uranus: #1ec1a2;
   --neptune: #2d68f0;
   --mercury-size: 6.9375rem;
+  --mercury-size: 11.5rem;
   --venus-size: 9.625rem;
+  --venus-size: 15.8125rem;
   --earth-size: 10.8125rem;
+  --earth-size: 17.8125rem;
   --mars-size: 8.0625rem;
+  --mars-size: 13.3125rem;
   --jupiter-size: 14rem;
+  --jupiter-size: 23.0625rem;
   --saturn-size: 16rem;
+  --saturn-size: 26.375rem;
   --uranus-size: 11rem;
+  --uranus-size: 18.125rem;
   --neptune-size: 10.8125rem;
+  --neptune-size: 17.8125rem;
 
   --planet-color: var(--mercury);
   --planet-size: var(--mercury-size);
@@ -80,6 +88,7 @@ header {
   justify-content: space-between;
   /* Tablet */
   padding-block: 2rem 1.6875rem;
+  padding-inline: 3.1875rem;
 }
 #content {
   display: grid;
@@ -93,6 +102,8 @@ header {
 
   /* Mobile */
   padding-inline: 1.5rem;
+  /* TAblet */
+  padding-inline: 4.125rem;
 }
 .content-info {
   grid-area: content-info;
@@ -128,7 +139,8 @@ header {
     }
   }
 }
-#desktop-tabs {
+#desktop-tabs,
+#desktop-nav {
   display: none;
 }
 #hamburger-btn {
