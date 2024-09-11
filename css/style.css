@@ -312,6 +312,7 @@ header {
   display: block;
 }
 #planet {
+  z-index: -1;
   /* Mobile */
   width: var(--planet-size);
 }
@@ -555,6 +556,10 @@ header {
   #mobile-tabs {
     display: none;
   }
+
+  #planet-con {
+    height: clamp(28.75rem, 7.75rem + 43.75vw, 47.125rem);
+  }
   #stats {
     flex-direction: row;
 
@@ -611,7 +616,6 @@ header {
   #planet-con {
     position: relative;
 
-    height: clamp(28.75rem, 7.75rem + 43.75vw, 47.125rem);
     /* height: 28.75rem; */
     /*Desktop */
     /* height: 47.125rem; */
@@ -639,9 +643,6 @@ header {
   }
   .show {
     display: block;
-  }
-  #planet-con {
-    width: 47.5rem;
   }
 
   .content-info {
