@@ -31,30 +31,45 @@
   --saturn: #cd5120;
   --uranus: #1ec1a2;
   --neptune: #2d68f0;
-  --mercury-size: 6.9375rem;
-  --mercury-size: 11.5rem;
-  --mercury-size: 18.125rem;
-  --venus-size: 9.625rem;
-  --venus-size: 15.8125rem;
-  --venus-size: 25rem;
-  --earth-size: 10.8125rem;
-  --earth-size: 17.8125rem;
-  --earth-size: 28.125rem;
-  --mars-size: 8.0625rem;
-  --mars-size: 13.3125rem;
-  --mars-size: 21rem;
-  --jupiter-size: 14rem;
-  --jupiter-size: 23.0625rem;
-  --jupiter-size: 36.375rem;
-  --saturn-size: 16rem;
-  --saturn-size: 26.375rem;
-  --saturn-size: 41.630625rem;
-  --uranus-size: 11rem;
-  --uranus-size: 18.125rem;
-  --uranus-size: 28.625rem;
-  --neptune-size: 10.8125rem;
-  --neptune-size: 17.8125rem;
-  --neptune-size: 28.125rem;
+  /* --mercury-size: 6.9375rem; */
+  /* --mercury-size: 11.5rem; */
+  --mercury-size: clamp(6.9375rem, 2.584rem + 18.5751vw, 11.5rem);
+  /* --mercury-size: 18.125rem; */
+
+  /* --venus-size: 9.625rem; */
+  /* --venus-size: 15.8125rem; */
+  --venus-size: clamp(9.625rem, 3.7209rem + 25.1908vw, 15.8125rem);
+  /* --venus-size: 25rem; */
+
+  /* --earth-size: 10.8125rem; */
+  /* --earth-size: 17.8125rem; */
+  --earth-size: clamp(10.8125rem, 4.1331rem + 28.4987vw, 17.8125rem);
+  /* --earth-size: 28.125rem; */
+
+  /* --mars-size: 8.0625rem; */
+  /* --mars-size: 13.3125rem; */
+  --mars-size: clamp(8.0625rem, 3.053rem + 21.374vw, 13.3125rem);
+  /* --mars-size: 21rem; */
+
+  /* --jupiter-size: 14rem; */
+  /* --jupiter-size: 23.0625rem; */
+  --jupiter-size: clamp(14rem, 5.3526rem + 36.8957vw, 23.0625rem);
+  /* --jupiter-size: 36.375rem; */
+
+  /* --saturn-size: 16rem; */
+  /* --saturn-size: 26.375rem; */
+  --saturn-size: clamp(16rem, 6.1002rem + 42.2392vw, 26.375rem);
+  /* --saturn-size: 41.630625rem; */
+
+  /* --uranus-size: 11rem; */
+  /* --uranus-size: 18.125rem; */
+  --uranus-size: clamp(11rem, 4.2013rem + 29.0076vw, 18.125rem);
+  /* --uranus-size: 28.625rem; */
+
+  /* --neptune-size: 10.8125rem; */
+  /* --neptune-size: 17.8125rem; */
+  --neptune-size: clamp(10.8125rem, 4.1331rem + 28.4987vw, 17.8125rem);
+  /* --neptune-size: 28.125rem; */
 
   --planet-color: var(--mercury);
   --planet-size: var(--mercury-size);
@@ -379,6 +394,39 @@ header {
 }
 
 @media (min-width: 48rem) {
+  :root {
+    /* --mercury-size: 11.5rem; */
+    /* --mercury-size: 18.125rem; */
+    --mercury-size: clamp(11.5rem, 3.9286rem + 15.7738vw, 18.125rem);
+
+    /* --venus-size: 15.8125rem; */
+    --venus-size: clamp(15.8125rem, 5.3125rem + 21.875vw, 25rem);
+    /* --venus-size: 25rem; */
+
+    /* --earth-size: 17.8125rem; */
+    --earth-size: clamp(17.8125rem, 6.0268rem + 24.5536vw, 28.125rem);
+    /* --earth-size: 28.125rem; */
+
+    /* --mars-size: 13.3125rem; */
+    --mars-size: clamp(13.3125rem, 4.5268rem + 18.3036vw, 21rem);
+    /* --mars-size: 21rem; */
+
+    /* --jupiter-size: 23.0625rem; */
+    --jupiter-size: clamp(23.0625rem, 7.8482rem + 31.6964vw, 36.375rem);
+    /* --jupiter-size: 36.375rem; */
+
+    /* --saturn-size: 26.375rem; */
+    --saturn-size: clamp(26.375rem, 8.94rem + 36.3229vw, 41.6306rem);
+    /* --saturn-size: 41.630625rem; */
+
+    /* --uranus-size: 18.125rem; */
+    --uranus-size: clamp(18.125rem, 6.125rem + 25vw, 28.625rem);
+    /* --uranus-size: 28.625rem; */
+
+    /* --neptune-size: 17.8125rem; */
+    --neptune-size: clamp(17.8125rem, 6.0268rem + 24.5536vw, 28.125rem);
+    /* --neptune-size: 28.125rem; */
+  }
   header {
     /* justify-content: center; */
     align-items: center;
