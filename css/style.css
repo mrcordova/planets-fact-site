@@ -601,7 +601,7 @@ header {
 
     & p {
       width: 30ch;
-      font-size: clamp(0.6875rem, 0.5086rem + 0.7634vw, 0.875rem);
+      font-size: clamp(0.6875rem, 0.4732rem + 0.4464vw, 0.875rem);
       line-height: 1.78;
     }
   }
