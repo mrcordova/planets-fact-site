@@ -334,14 +334,10 @@ header {
   grid-area: stats;
 
   justify-content: space-between;
+  gap: clamp(0.5rem, 0.3211rem + 0.7634vw, 0.6875rem);
+  margin-block-end: clamp(0rem, -2.1469rem + 9.1603vw, 2.25rem);
   /* Mobile */
-  gap: 0.5rem;
-  /* Tablet */
-  gap: 0.6875rem;
-  margin-block-end: 2.25rem;
-  /* Desktop */
-  gap: 1.875rem;
-  margin-block-end: 2.25rem;
+  /* gap: 0.5rem; */
 
   & div {
     display: flex;
@@ -351,12 +347,16 @@ header {
     text-transform: uppercase;
     border: 1px solid var(--white);
 
+    padding-inline: clamp(0.9375rem, 2.0367rem + -2.2901vw, 1.5rem)
+      clamp(1.5rem, -1.1837rem + 11.4504vw, 4.3125rem);
+    padding-block: clamp(0.5625rem, 0.145rem + 1.7812vw, 1rem)
+      clamp(0.8125rem, 0.4547rem + 1.5267vw, 1.1875rem);
     /* Mobile */
-    padding-inline: 1.5rem;
-    padding-block: 0.5625rem 0.8125rem;
+    /* padding-inline: 1.5rem; */
+    /* padding-block: 0.5625rem 0.8125rem; */
     /* Tablet  */
-    padding-inline: 0.9375rem 4.3125rem;
-    padding-block: 1rem 1.1875rem;
+    /* padding-inline: 0.9375rem 4.3125rem; */
+    /* padding-block: 1rem 1.1875rem; */
 
     & p:first-child {
       font-size: 0.5rem;
@@ -369,9 +369,11 @@ header {
     }
 
     & p:nth-child(2) {
+      font-size: clamp(1.25rem, 1.0115rem + 1.0178vw, 1.5rem);
+      letter-spacing: clamp(-0.0562rem, -0.0379rem + -0.0382vw, -0.0469rem);
       /* Mobile */
-      font-size: 1.25rem;
-      letter-spacing: -0.046875rem;
+      /* font-size: 1.25rem; */
+      /* letter-spacing: -0.046875rem; */
       /* Tablet */
       font-size: 1.5rem;
       letter-spacing: -0.05625rem;
@@ -555,11 +557,41 @@ header {
   }
   #stats {
     flex-direction: row;
-    div {
+
+    gap: clamp(0.6875rem, -0.6696rem + 2.8274vw, 1.875rem);
+    /* Tablet */
+    /* gap: 0.6875rem; */
+    /* margin-block-end: 2.25rem; */
+    /* Desktop */
+    /* gap: 1.875rem; */
+    /* margin-block-end: 2.25rem; */
+    & div {
       display: flex;
       flex-direction: column;
 
       align-items: flex-start;
+
+      & p:first-child {
+        font-size: clamp(0.5rem, 0.2857rem + 0.4464vw, 0.6875rem);
+        /* font-size: 0.5rem; */
+        line-height: 2;
+        letter-spacing: 0.045625rem;
+        /* Desktop */
+        /* font-size: 0.6875rem; */
+        line-height: 1.5625;
+        /* letter-spacing: 0.045625rem; */
+      }
+
+      & p:nth-child(2) {
+        font-size: clamp(1.5rem, 0.3571rem + 2.381vw, 2.5rem);
+        letter-spacing: clamp(-0.0937rem, -0.0134rem + -0.0893vw, -0.0562rem);
+        /* Tablet */
+        /* font-size: 1.5rem; */
+        /* letter-spacing: -0.05625rem; */
+        /* Tablet */
+        /* font-size: 2.5rem; */
+        /* letter-spacing: -0.09375rem; */
+      }
     }
   }
 }
@@ -625,5 +657,13 @@ header {
 
   #desktop-tabs {
     justify-content: flex-start;
+  }
+
+  #stats {
+    & div {
+      & p:first-child {
+        line-height: 1.5625;
+      }
+    }
   }
 }
