@@ -100,6 +100,7 @@ header {
 
   padding-inline: clamp(1.5rem, 0.6054rem + 3.8168vw, 2.4375rem)
     clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
+  transition: 1s ease;
 }
 .content-info {
   grid-area: content-info;
@@ -279,6 +280,7 @@ header {
   justify-content: center;
   align-items: center;
   grid-area: img;
+  transition: 1s ease;
 
   height: clamp(19rem, 9.6966rem + 39.6947vw, 28.75rem);
 }
