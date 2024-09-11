@@ -31,49 +31,25 @@
   --saturn: #cd5120;
   --uranus: #1ec1a2;
   --neptune: #2d68f0;
-  /* --mercury-size: 6.9375rem; */
-  /* --mercury-size: 11.5rem; */
+
   --mercury-size: clamp(6.9375rem, 2.584rem + 18.5751vw, 11.5rem);
-  /* --mercury-size: 18.125rem; */
 
-  /* --venus-size: 9.625rem; */
-  /* --venus-size: 15.8125rem; */
   --venus-size: clamp(9.625rem, 3.7209rem + 25.1908vw, 15.8125rem);
-  /* --venus-size: 25rem; */
 
-  /* --earth-size: 10.8125rem; */
-  /* --earth-size: 17.8125rem; */
   --earth-size: clamp(10.8125rem, 4.1331rem + 28.4987vw, 17.8125rem);
-  /* --earth-size: 28.125rem; */
 
-  /* --mars-size: 8.0625rem; */
-  /* --mars-size: 13.3125rem; */
   --mars-size: clamp(8.0625rem, 3.053rem + 21.374vw, 13.3125rem);
-  /* --mars-size: 21rem; */
 
-  /* --jupiter-size: 14rem; */
-  /* --jupiter-size: 23.0625rem; */
   --jupiter-size: clamp(14rem, 5.3526rem + 36.8957vw, 23.0625rem);
-  /* --jupiter-size: 36.375rem; */
 
-  /* --saturn-size: 16rem; */
-  /* --saturn-size: 26.375rem; */
   --saturn-size: clamp(16rem, 6.1002rem + 42.2392vw, 26.375rem);
-  /* --saturn-size: 41.630625rem; */
 
-  /* --uranus-size: 11rem; */
-  /* --uranus-size: 18.125rem; */
   --uranus-size: clamp(11rem, 4.2013rem + 29.0076vw, 18.125rem);
-  /* --uranus-size: 28.625rem; */
 
-  /* --neptune-size: 10.8125rem; */
-  /* --neptune-size: 17.8125rem; */
   --neptune-size: clamp(10.8125rem, 4.1331rem + 28.4987vw, 17.8125rem);
-  /* --neptune-size: 28.125rem; */
 
   --planet-color: var(--mercury);
   --planet-size: var(--mercury-size);
-  /* --planet-img: var() */
 }
 
 html {
@@ -87,7 +63,6 @@ button {
   text-decoration: none;
   text-transform: uppercase;
 
-  /* Mobile */
   font-size: 0.5625rem;
   letter-spacing: 0.120625rem;
   line-height: 1.11;
@@ -113,9 +88,7 @@ header {
   padding-inline: clamp(1.5rem, -0.1102rem + 6.8702vw, 3.1875rem);
   padding-block: clamp(1rem, 0.0458rem + 4.0712vw, 2rem)
     clamp(1rem, 0.344rem + 2.799vw, 1.6875rem);
-  /* Mobile */
-  /* padding-inline: 1.5rem; */
-  /* padding-block: 1rem; */
+
   justify-content: space-between;
 }
 #content {
@@ -127,12 +100,6 @@ header {
 
   padding-inline: clamp(1.5rem, 0.6054rem + 3.8168vw, 2.4375rem)
     clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
-  /* Mobile */
-  /* padding-inline: 1.5rem; */
-  /* TAblet */
-  /* padding-inline: 2.4375rem 2.5rem; */
-  /* Desktop */
-  /* padding-inline: 10.3125rem; */
 }
 .content-info {
   grid-area: content-info;
@@ -143,19 +110,11 @@ header {
   & h1 {
     font-size: clamp(2.5rem, 2.0229rem + 2.0356vw, 3rem);
     padding-block-end: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
-    /* Mobile */
-    /* font-size: 2.5rem; */
-    /* padding-block-end: 1rem; */
   }
 
   & p {
     line-height: 2;
-    /* Mobile */
     font-size: 0.6875rem;
-    /* line-height: 2; */
-    /* Desktop */
-    /* font-size: 0.875rem; */
-    /* line-height: 1.78; */
   }
 
   #source {
@@ -285,7 +244,6 @@ header {
   border-bottom: 1px solid var(--gray);
   display: flex;
   justify-content: space-between;
-  /* Mobile */
   padding-inline: 1.5rem;
 
   & button {
@@ -313,7 +271,6 @@ header {
 }
 #planet {
   z-index: -1;
-  /* Mobile */
   width: var(--planet-size);
 }
 
@@ -324,9 +281,6 @@ header {
   grid-area: img;
 
   height: clamp(19rem, 9.6966rem + 39.6947vw, 28.75rem);
-  /* Mobile */
-  /* height: 19rem; */
-  /* TAblet */
 }
 
 #stats {
@@ -337,8 +291,6 @@ header {
   justify-content: space-between;
   gap: clamp(0.5rem, 0.3211rem + 0.7634vw, 0.6875rem);
   margin-block-end: clamp(0rem, -2.1469rem + 9.1603vw, 2.25rem);
-  /* Mobile */
-  /* gap: 0.5rem; */
 
   & div {
     display: flex;
@@ -352,77 +304,40 @@ header {
       clamp(1.5rem, -1.1837rem + 11.4504vw, 4.3125rem);
     padding-block: clamp(0.5625rem, 0.145rem + 1.7812vw, 1rem)
       clamp(0.8125rem, 0.4547rem + 1.5267vw, 1.1875rem);
-    /* Mobile */
-    /* padding-inline: 1.5rem; */
-    /* padding-block: 0.5625rem 0.8125rem; */
-    /* Tablet  */
-    /* padding-inline: 0.9375rem 4.3125rem; */
-    /* padding-block: 1rem 1.1875rem; */
 
     & p:first-child {
       font-size: 0.5rem;
       line-height: 2;
       letter-spacing: 0.045625rem;
-      /* Desktop */
-      /* font-size: 0.6875rem; */
-      /* line-height: 1.5625; */
-      /* letter-spacing: 0.045625rem; */
     }
 
     & p:nth-child(2) {
       font-size: clamp(1.25rem, 1.0115rem + 1.0178vw, 1.5rem);
       letter-spacing: clamp(-0.0562rem, -0.0379rem + -0.0382vw, -0.0469rem);
-      /* Mobile */
-      /* font-size: 1.25rem; */
-      /* letter-spacing: -0.046875rem; */
-      /* Tablet */
-      /* font-size: 1.5rem; */
-      /* letter-spacing: -0.05625rem; */
-      /* Tablet */
-      /* font-size: 2.5rem; */
-      /* letter-spacing: -0.09375rem; */
     }
   }
 }
 
 @media (min-width: 48rem) {
   :root {
-    /* --mercury-size: 11.5rem; */
-    /* --mercury-size: 18.125rem; */
     --mercury-size: clamp(11.5rem, 3.9286rem + 15.7738vw, 18.125rem);
 
-    /* --venus-size: 15.8125rem; */
     --venus-size: clamp(15.8125rem, 5.3125rem + 21.875vw, 25rem);
-    /* --venus-size: 25rem; */
 
-    /* --earth-size: 17.8125rem; */
     --earth-size: clamp(17.8125rem, 6.0268rem + 24.5536vw, 28.125rem);
-    /* --earth-size: 28.125rem; */
 
-    /* --mars-size: 13.3125rem; */
     --mars-size: clamp(13.3125rem, 4.5268rem + 18.3036vw, 21rem);
-    /* --mars-size: 21rem; */
 
-    /* --jupiter-size: 23.0625rem; */
     --jupiter-size: clamp(23.0625rem, 7.8482rem + 31.6964vw, 36.375rem);
-    /* --jupiter-size: 36.375rem; */
 
-    /* --saturn-size: 26.375rem; */
     --saturn-size: clamp(26.375rem, 8.94rem + 36.3229vw, 41.6306rem);
-    /* --saturn-size: 41.630625rem; */
 
-    /* --uranus-size: 18.125rem; */
     --uranus-size: clamp(18.125rem, 6.125rem + 25vw, 28.625rem);
-    /* --uranus-size: 28.625rem; */
 
-    /* --neptune-size: 17.8125rem; */
     --neptune-size: clamp(17.8125rem, 6.0268rem + 24.5536vw, 28.125rem);
-    /* --neptune-size: 28.125rem; */
   }
   header {
-    /* justify-content: center; */
     align-items: center;
-    /* flex-wrap: wrap; */
     flex-direction: column;
     border-bottom: 1px solid var(--gray);
     padding-inline: clamp(2rem, 4.5446rem + -2.8274vw, 3.1875rem)
@@ -430,13 +345,6 @@ header {
     padding-block: clamp(0rem, 4.2857rem + -4.7619vw, 2rem)
       clamp(0rem, 3.6161rem + -4.0179vw, 1.6875rem);
 
-    /* Tablet */
-    /* padding-inline: 3.1875rem; */
-    /* padding-block: 2rem 1.6875rem; */
-    /* Desktop */
-    /* padding-inline: 2rem 2.5rem; */
-    /* padding-block: 0; */
-    /* tablet */
     gap: 2.4375rem;
   }
 
@@ -448,10 +356,6 @@ header {
 
     padding-inline: clamp(2.4375rem, -6.5625rem + 18.75vw, 10.3125rem)
       clamp(2.5rem, -6.4286rem + 18.6012vw, 10.3125rem);
-    /* TAblet */
-    /* padding-inline: 2.4375rem 2.5rem; */
-    /* Desktop */
-    /* padding-inline: 10.3125rem; */
   }
   .content-info {
     text-align: left;
@@ -460,12 +364,6 @@ header {
     & h1 {
       font-size: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
       padding-block-end: clamp(1.4375rem, 1.5714rem + -0.1488vw, 1.5rem);
-      /* Tablet */
-      /* font-size: 3rem; */
-      /* padding-block-end: 1.5rem; */
-      /* DEsktop */
-      /* font-size: 5rem; */
-      /* padding-block-end: 1.4375rem; */
     }
     #source {
       justify-content: flex-start;
@@ -474,13 +372,8 @@ header {
         clamp(1.75rem, 0.9643rem + 1.6369vw, 2.4375rem);
       font-size: clamp(0.75rem, 0.6071rem + 0.2976vw, 0.875rem);
       line-height: 2.083;
-      /* tablet */
-      /* padding-block: 2rem 1.75rem; */
-      /* font-size: 0.75rem; */
+
       line-height: 2.083;
-      /* Dekstop */
-      /* padding-block: 1.5rem 2.4375rem; */
-      /* font-size: 0.875rem; */
     }
     & p {
       font-size: clamp(0.6875rem, 0.4732rem + 0.4464vw, 0.875rem);
@@ -500,9 +393,7 @@ header {
     & > #desktop-menu {
       display: flex;
 
-      /* flex-wrap: wrap; */
       list-style: none;
-      /* Tablet */
       font-size: 0.6875rem;
       letter-spacing: 0.0625rem;
       gap: 2.0625rem;
@@ -564,12 +455,7 @@ header {
     flex-direction: row;
 
     gap: clamp(0.6875rem, -0.6696rem + 2.8274vw, 1.875rem);
-    /* Tablet */
-    /* gap: 0.6875rem; */
-    /* margin-block-end: 2.25rem; */
-    /* Desktop */
-    /* gap: 1.875rem; */
-    /* margin-block-end: 2.25rem; */
+
     & div {
       display: flex;
       flex-direction: column;
@@ -580,24 +466,15 @@ header {
 
       & p:first-child {
         font-size: clamp(0.5rem, 0.2857rem + 0.4464vw, 0.6875rem);
-        /* font-size: 0.5rem; */
         line-height: 2;
         letter-spacing: 0.045625rem;
-        /* Desktop */
-        /* font-size: 0.6875rem; */
+
         line-height: 1.5625;
-        /* letter-spacing: 0.045625rem; */
       }
 
       & p:nth-child(2) {
         font-size: clamp(1.5rem, 0.3571rem + 2.381vw, 2.5rem);
         letter-spacing: clamp(-0.0937rem, -0.0134rem + -0.0893vw, -0.0562rem);
-        /* Tablet */
-        /* font-size: 1.5rem; */
-        /* letter-spacing: -0.05625rem; */
-        /* Tablet */
-        /* font-size: 2.5rem; */
-        /* letter-spacing: -0.09375rem; */
       }
     }
   }
@@ -615,10 +492,6 @@ header {
 
   #planet-con {
     position: relative;
-
-    /* height: 28.75rem; */
-    /*Desktop */
-    /* height: 47.125rem; */
   }
   #desktop-nav {
     & li {
@@ -633,7 +506,6 @@ header {
   }
 
   #geology {
-    /* display: block; */
     position: absolute;
     height: 12.4375rem;
     top: 29.25rem;
