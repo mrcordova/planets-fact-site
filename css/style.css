@@ -363,9 +363,9 @@ header {
       line-height: 2;
       letter-spacing: 0.045625rem;
       /* Desktop */
-      font-size: 0.6875rem;
-      line-height: 1.5625;
-      letter-spacing: 0.045625rem;
+      /* font-size: 0.6875rem; */
+      /* line-height: 1.5625; */
+      /* letter-spacing: 0.045625rem; */
     }
 
     & p:nth-child(2) {
@@ -375,11 +375,11 @@ header {
       /* font-size: 1.25rem; */
       /* letter-spacing: -0.046875rem; */
       /* Tablet */
-      font-size: 1.5rem;
-      letter-spacing: -0.05625rem;
+      /* font-size: 1.5rem; */
+      /* letter-spacing: -0.05625rem; */
       /* Tablet */
-      font-size: 2.5rem;
-      letter-spacing: -0.09375rem;
+      /* font-size: 2.5rem; */
+      /* letter-spacing: -0.09375rem; */
     }
   }
 }
@@ -570,6 +570,8 @@ header {
       flex-direction: column;
 
       align-items: flex-start;
+
+      padding-inline: clamp(0.9375rem, 0.3661rem + 1.1905vw, 1.4375rem) 0rem;
 
       & p:first-child {
         font-size: clamp(0.5rem, 0.2857rem + 0.4464vw, 0.6875rem);
