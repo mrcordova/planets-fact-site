@@ -141,24 +141,21 @@ header {
   flex-direction: column;
   text-align: center;
   & h1 {
+    font-size: clamp(2.5rem, 2.0229rem + 2.0356vw, 3rem);
+    padding-block-end: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
     /* Mobile */
-    font-size: 2.5rem;
-    padding-block-end: 1rem;
-    /* Tablet */
-    font-size: 3rem;
-    padding-block-end: 1.5rem;
-    /* DEsktop */
-    font-size: 5rem;
-    padding-block-end: 1.4375rem;
+    /* font-size: 2.5rem; */
+    /* padding-block-end: 1rem; */
   }
 
   & p {
+    line-height: 2;
     /* Mobile */
     font-size: 0.6875rem;
-    line-height: 2;
+    /* line-height: 2; */
     /* Desktop */
-    font-size: 0.875rem;
-    line-height: 1.78;
+    /* font-size: 0.875rem; */
+    /* line-height: 1.78; */
   }
 
   #source {
@@ -462,6 +459,16 @@ header {
     text-align: left;
     align-items: flex-start;
 
+    & h1 {
+      font-size: clamp(3rem, 0.7143rem + 4.7619vw, 5rem);
+      padding-block-end: clamp(1.4375rem, 1.5714rem + -0.1488vw, 1.5rem);
+      /* Tablet */
+      /* font-size: 3rem; */
+      /* padding-block-end: 1.5rem; */
+      /* DEsktop */
+      /* font-size: 5rem; */
+      /* padding-block-end: 1.4375rem; */
+    }
     #source {
       justify-content: flex-start;
     }
@@ -594,6 +601,8 @@ header {
 
     & p {
       width: 30ch;
+      font-size: clamp(0.6875rem, 0.5086rem + 0.7634vw, 0.875rem);
+      line-height: 1.78;
     }
   }
 
