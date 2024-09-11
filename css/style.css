@@ -125,12 +125,14 @@ header {
     "content-info content-info"
     "stats stats";
 
+  padding-inline: clamp(1.5rem, 0.6054rem + 3.8168vw, 2.4375rem)
+    clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
   /* Mobile */
-  padding-inline: 1.5rem;
+  /* padding-inline: 1.5rem; */
   /* TAblet */
-  padding-inline: 2.4375rem 2.5rem;
+  /* padding-inline: 2.4375rem 2.5rem; */
   /* Desktop */
-  padding-inline: 10.3125rem;
+  /* padding-inline: 10.3125rem; */
 }
 .content-info {
   grid-area: content-info;
@@ -448,6 +450,13 @@ header {
       "img img img img"
       "content-info content-info tabs tabs"
       "stats stats stats stats";
+
+    padding-inline: clamp(2.4375rem, -6.5625rem + 18.75vw, 10.3125rem)
+      clamp(2.5rem, -6.4286rem + 18.6012vw, 10.3125rem);
+    /* TAblet */
+    /* padding-inline: 2.4375rem 2.5rem; */
+    /* Desktop */
+    /* padding-inline: 10.3125rem; */
   }
   .content-info {
     text-align: left;
